@@ -24,13 +24,24 @@ setInterval(function() {
             return digit;
         }
     }
+    /* Declares AM or PM */
+    function amOrPm(time) {
+        if (time >= 12) {
+            let clockTime = 'PM';
+            return clockTime;
+        } else {
+            let clockTIme = 'AM'
+            return clockTime;
+        }
+    }
 
+    whatTime = amOrPm(hours)
     hours = standardTime(hours);
 
     hours = doubleDigit(hours);
     minutes = doubleDigit(minutes);
     seconds = doubleDigit(seconds);
 
-    clock.textContent = hours + ':' + minutes + ':' + seconds;
+    clock.textContent = hours + ':' + minutes + ':' + seconds + ' ' + whatTime;
 
 },1000);
