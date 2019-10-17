@@ -30,7 +30,7 @@ setInterval(function() {
             let clockTime = 'PM';
             return clockTime;
         } else {
-            let clockTIme = 'AM'
+            let clockTime = 'AM'
             return clockTime;
         }
     }
